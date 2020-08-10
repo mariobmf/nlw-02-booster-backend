@@ -19,6 +19,33 @@ interface IClass {
 }
 
 class ClassController {
+  public async index(request: Request, response: Response): Promise<Response> {
+    const { subject, week_day, time } = request.query;
+
+    if (!week_day || !subject || !time) {
+      return response
+        .status(400)
+        .json({ error: 'Missing filters to search classes' });
+    }
+    const timesInMinutes = convertHourToMinutes(time as string);
+
+    const classes = await db('classes')
+      // eslint-disable-next-line func-names
+      .whereExists(function () {
+        this.select('class_schedule.*')
+          .from('class_schedule')
+          .whereRaw('`class_schedule`.`class_id` = `classes`.`id`')
+          .whereRaw('`class_schedule`.`week_day` = ??', [Number(week_day)])
+          .whereRaw('`class_schedule`.`from` <= ??', [timesInMinutes])
+          .whereRaw('`class_schedule`.`to` > ??', [timesInMinutes]);
+      })
+      .where('classes.subject', '=', subject as string)
+      .join('users', 'classes.user_id', '=', 'users.id')
+      .select(['classes.*', 'users.*']);
+
+    return response.json(classes);
+  }
+
   public async store(request: Request, response: Response): Promise<Response> {
     const {
       name,
