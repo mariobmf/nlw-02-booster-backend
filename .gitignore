@@ -1,4 +1,5 @@
 /node_modules
+*.sqlite
 *.sqlite3
 *.sqlite3-journal
 package-lock.json
