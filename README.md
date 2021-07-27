@@ -27,10 +27,10 @@ O Proffy é uma plataforma de estudos online que ajuda pessoas a encontrarem pro
 
 ```bash
 # Clonar o Repositório
-$ git clone https://github.com/DanielObara/NLW-1.0
+$ git clone https://github.com/mariobmf/nlw-02-booster-backend.git
 
 # Entrar no Repositório
-$ cd /backend
+$ cd /nlw-02-booster-backend
 
 # Instalar as Dependências
 $ yarn install
