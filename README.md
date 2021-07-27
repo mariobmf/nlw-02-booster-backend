@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="BeTheHero" title="BeTheHero" src=".github/proffy.svg" width="200px" />
+    <img alt="Proffy" title="Proffy" src=".github/proffy.svg" width="200px" />
 </h1>
 
 <p align="center">
@@ -9,7 +9,7 @@
 </p>
 
 <h1 align="center">
-    <img alt="BeTheHero" title="#delicinha" src=".github/proffy-web.png" height="400px"/>
+    <img alt="Proffy" title="#delicinha" src=".github/proffy-web.png" height="400px"/>
 </h1>
 
 ## 🚀 Tecnologias
