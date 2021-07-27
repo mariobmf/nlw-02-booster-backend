@@ -49,4 +49,4 @@ $ yarn dev
 
 ---
 
-Feito por [Mário Fernandes](https://www.linkedin.com/in/mario-fernandes-dev/) com base na semana NLW 01
+Feito por [Mário Fernandes](https://www.linkedin.com/in/mario-fernandes-dev/) com base na semana NLW 02
